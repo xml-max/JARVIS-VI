@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic UI</title>
+  <stylehtml, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  }>
+  <style>
+  .neon-terminal {
+    caret-color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .neon-terminal:focus {
+    box-shadow: 0 0 20px #00e5ffaa, 0 0 30px #00e5ff88;
+    border-color: #00e5ff;
+  }
+  .data-box {
+    background-color: rgba(0, 229, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+}
+
+</style>
+
+
+  <!-- ✅ Tailwind CSS  -->
+  <link href="assets/tailwind.v3.4.1.css" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0e1a;
+            color: #00e5ff;
+            overflow: hidden;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff;
+        }
+        .neon-border {
+            border-color: #00e5ff;
+            box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff inset;
+        }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .bg-radial-gradient {
+            background-image: radial-gradient(circle, rgba(0, 229, 255, 0.2) 0%, rgba(0, 229, 255, 0) 70%);
+        }
+        .bg-scanlines {
+            position: relative;
+        }
+        .bg-scanlines::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+            background-size: 1px 3px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .glowing-icon {
+            filter: drop-shadow(0 0 3px #00e5ff) drop-shadow(0 0 5px #00e5ff);
+        }
+        .data-box {
+            background-color: rgba(0, 229, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 8px;
+            backdrop-filter: blur(2px);
+        }
+        .animated-arc {
+            animation: arcAnimation 5s linear infinite;
+        }
+        @keyframes arcAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+<style>
+@font-face {
+  font-family: 'Orbitron';
+  src: url('assets/fonts/Orbitron-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Material Icons';
+  src: url('assets/fonts/MaterialIcons-Regular.woff2') format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  display: inline-block;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+</style>
+
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 bg-scanlines">
+<div class="absolute top-0 left-0 right-0 h-12 bg-black/30 flex items-center px-4 z-50">
+<div class="flex space-x-2 text-xs">
+<span class="text-cyan-400">01</span>
+<span>02</span>
+<span>03</span>
+<span>04</span>
+<span>05</span>
+<span>06</span>
+<span class="text-cyan-400">07</span>
+<span>08</span>
+<span>09</span>
+<span>10</span>
+<span>11</span>
+<span>12</span>
+<span class="text-cyan-400">13</span>
+<span>14</span>
+<span>15</span>
+<span class="text-cyan-400 font-bold">Spawning</span>
+<span>16</span>
+<span>17</span>
+<span>18</span>
+<span>19</span>
+<span>20</span>
+<span class="bg-cyan-500 text-black px-1 rounded-sm">21</span>
+<span>22</span>
+<span>23</span>
+<span>24</span>
+<span>25</span>
+<span>26</span>
+<span>27</span>
+<span>28</span>
+<span>29</span>
+<span>30</span>
+</div>
+<div class="ml-auto text-xs text-cyan-400">
+            Moscow, Russia <span class="text-white ml-2">6/21 12:36 PM</span>
+</div>
+</div>
+<div class="grid grid-cols-12 grid-rows-6 gap-2 w-full h-[calc(100vh-3rem)] max-w-7xl p-2">
+<div class="col-span-2 row-span-2 data-box p-3 flex flex-col items-center justify-center">
+<div class="relative w-28 h-28">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-cyan-700/50" cx="50" cy="50" fill="transparent" r="46" stroke="currentColor" stroke-width="4"></circle>
+<circle class="progress-ring__circle text-cyan-400" cx="50" cy="50" fill="transparent" r="46" stroke="currentColor" stroke-dasharray="289.027" stroke-dashoffset="72.256" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<div class="font-orbitron text-4xl neon-text">21</div>
+<div class="text-xs text-cyan-300">JUNE</div>
+</div>
+</div>
+<div class="text-xs text-cyan-200 mt-2">01:06:39</div>
+</div>
+<div class="col-span-1 row-span-1 data-box p-2 flex flex-col items-center justify-center relative">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-cyan-700/50" cx="50" cy="50" fill="transparent" r="44" stroke="currentColor" stroke-width="6"></circle>
+<circle class="progress-ring__circle text-cyan-400" cx="50" cy="50" fill="transparent" r="44" stroke="currentColor" stroke-dasharray="276.46" stroke-dashoffset="138.23" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-xs">
+<div>CPU</div>
+<div class="font-orbitron text-lg neon-text">1.4</div>
+</div>
+</div>
+<div class="text-[10px] text-cyan-300 mt-1">51°</div>
+</div>
+<div class="col-span-1 row-span-1 data-box p-2 flex flex-col items-center justify-center relative">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-cyan-700/50" cx="50" cy="50" fill="transparent" r="44" stroke="currentColor" stroke-width="6"></circle>
+<circle class="progress-ring__circle text-cyan-400" cx="50" cy="50" fill="transparent" r="44" stroke="currentColor" stroke-dasharray="276.46" stroke-dashoffset="69.115" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-xs">
+<div>RAM</div>
+<div class="font-orbitron text-lg neon-text">49</div>
+</div>
+</div>
+<div class="text-[10px] text-cyan-300 mt-1">SWAP</div>
+</div>
+<div class="col-span-6 row-span-4 data-box p-1 flex items-center justify-center relative bg-radial-gradient">
+<img alt="Central HUD element with concentric circles and glowing core" class="max-w-full max-h-full opacity-80" src="assets/center.png"/>
+<div class="absolute top-1/4 left-1/4 text-cyan-400 text-xs opacity-70">Dead Space</div>
+<div class="absolute bottom-1/4 right-1/4 text-cyan-400 text-xs opacity-70">AIM P-2</div>
+<div class="absolute top-1/3 right-1/4 text-cyan-400 text-xs opacity-70">Series Locator</div>
+<div class="absolute bottom-1/3 left-1/4 text-cyan-400 text-xs opacity-70">Arduino</div>
+<div class="absolute w-1/2 h-1/2 border-2 border-cyan-500/30 rounded-full animate-pulse"></div>
+<div class="absolute w-2/3 h-2/3 border border-cyan-500/20 rounded-full animated-arc"></div>
+<div class="absolute w-5/6 h-5/6 border border-cyan-500/10 rounded-full animated-arc [animation-delay:-2.5s]"></div>
+</div>
+<div class="col-span-2 row-span-1 data-box p-3 flex flex-col items-center justify-center">
+<div class="relative w-20 h-20">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-cyan-700/50" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-width="5"></circle>
+<circle class="progress-ring__circle text-cyan-400" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-dasharray="282.743" stroke-dashoffset="94.247" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-orbitron text-3xl neon-text">
+                    2:40
+                </div>
+</div>
+</div>
+<div class="col-span-3 row-span-1 data-box p-3 text-xs">
+<div class="flex items-center mb-1">
+<i class="material-icons text-cyan-400 mr-2 glowing-icon">volume_up</i>
+<span>Media Player</span>
+</div>
+<div class="flex items-center mb-1">
+<!-- <i class="material-icons text-cyan-400 mr-2 glowing-icon">wb_sunny</i>
+<span>Crimson Color of Snowfall</span> -->
+</div>
+<div class="flex items-center">
+<i class="material-icons text-cyan-400 mr-2 glowing-icon">music_note</i>
+<span>Music Connected Us</span>
+</div>
+</div>
+<div class="col-span-2 row-span-1 data-box p-2 text-xs">
+<div class="text-cyan-400">Total Volume: 100.0</div>
+<div class="text-cyan-300">Local Disk</div>
+<div class="text-cyan-300">Free: ...</div>
+</div>
+<div class="col-span-2 row-span-1 data-box p-2 text-xs flex flex-col justify-between">
+<div>
+<span class="text-cyan-400">Power</span>
+<span class="text-green-400 font-bold ml-1">100%</span>
+<span class="text-cyan-300 ml-1">Active</span>
+</div>
+<!-- <img alt="Stark Expo 2010 logo" class="h-8 w-auto my-1 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx98JUwnN34R3RiX-f5EibmAeClSW5bIBUtwCScF2n8I7gSTjf5DFMA_MGv41DeB-6uA6ZHE14VSuI6350gfEZyYkr6gF6p6OAyNkfG8oSfsqqp2FLgeDq76WOMWZKqmM5UWR8qlXLLRclOho0LtJz2LmKmTyOHH8giPcE3T46jTYMrhvC_glTZo_bL2rQ6cVosGd36pXxuSoKizKeYMrNMcU0JsYNwVoNk_xE6ePSjDb8eVI9QyxiyuVS2ZkpZ3xBpBcU2M4rOhMi"/> -->
+</div>
+
+<div class="col-span-2 row-span-1 data-box p-2 text-xs">
+<div><span class="text-cyan-400">Recycle Bin</span> <span class="text-cyan-200">0 Files</span></div>
+<div class="text-cyan-300">0 bytes</div>
+<div class="text-cyan-300">Uptime: 1 d. 4 h. 0 min</div>
+</div>
+<div class="col-span-2 row-span-2 data-box p-2 flex flex-col items-center justify-around">
+<div class="text-center">
+<i class="material-icons text-5xl text-cyan-400 glowing-icon">cloud_queue</i>
+<div class="text-xs text-cyan-300">Cloud</div>
+</div>
+<div class="text-center">
+<i class="material-icons text-5xl text-cyan-400 glowing-icon">settings_input_antenna</i>
+<div class="text-xs text-cyan-300">Local Network</div>
+</div>
+</div>
+<div class="col-span-1 row-span-1 data-box p-2 flex flex-col items-center justify-center">
+<i class="material-icons text-4xl text-cyan-400 mb-1 glowing-icon">brush</i>
+<div class="text-xs text-cyan-300">Art</div>
+</div>
+<div class="col-span-1 row-span-1 data-box p-2 flex flex-col items-center justify-center">
+<i class="material-icons text-4xl text-cyan-400 mb-1 glowing-icon">delete</i>
+<div class="text-xs text-cyan-300">Trash</div>
+</div>
+<div class="col-span-1 row-span-1 data-box p-2 flex flex-col items-center justify-center">
+<i class="material-icons text-4xl text-cyan-400 mb-1 glowing-icon">folder_open</i>
+<div class="text-xs text-cyan-300">Explorer</div>
+</div>
+<div class="col-span-3 row-span-4 data-box p-3 text-xs overflow-y-auto">
+<div class="text-cyan-400 font-orbitron text-2xl mb-2">13°C</div>
+<div class="mb-1"><span class="text-cyan-300">Clear</span></div>
+<div class="mb-1">Humidity: 77%</div>
+<div class="mb-1">Pressure: 977 mm</div>
+<div class="mb-1">Precipitation: 0%</div>
+<div class="mb-1">Visibility: 10.0 km</div>
+<div class="mb-1">Wind: 3 m/s (SW)</div>
+<div class="mb-1">Sunrise: 3:44 AM</div>
+<div class="mb-1">Sunset: 10:16 PM</div>
+<hr class="border-cyan-700 my-2"/>
+<div class="text-cyan-400 mb-1">Tomorrow</div>
+<div class="mb-1">11°</div>
+<div class="mb-1">Partly Cloudy</div>
+<hr class="border-cyan-700 my-2"/>
+<div class="text-cyan-400 mb-1">Thursday</div>
+<div class="mb-1">June, 21 <span class="text-cyan-300 ml-2">23° / 11°</span></div>
+<div class="mb-1">Sunny</div>
+<hr class="border-cyan-700 my-2"/>
+<div class="text-cyan-400 mb-1">Friday</div>
+<div class="mb-1">June, 22 <span class="text-cyan-300 ml-2">23° / 12°</span></div>
+<div class="mb-1">Clear</div>
+<hr class="border-cyan-700 my-2"/>
+<div class="text-cyan-400 mb-1">Saturday</div>
+<div class="mb-1">June, 23 <span class="text-cyan-300 ml-2">19° / 12°</span></div>
+<div class="mb-1">Partly Cloudy</div>
+</div>
+<div class="col-span-4 row-span-1 data-box p-3 text-xs">
+<div class="text-cyan-400 mb-1">Communications | New Mail</div>
+<div class="flex items-center mb-1">
+<i class="material-icons text-cyan-500 mr-1 text-sm glowing-icon">email</i>
+<span>Search</span>
+</div>
+<div class="flex items-center">
+<i class="material-icons text-cyan-500 mr-1 text-sm glowing-icon">chat_bubble_outline</i>
+<span>Community</span> 
+</div> 
+</div>
+<div class="col-span-3 row-span-1 data-box p-3 text-xs flex flex-col justify-center">
+<div class="flex items-center mb-1">
+<i class="material-icons text-green-400 mr-2 glowing-icon">videogame_asset</i>
+<span class="text-cyan-300">Games</span>
+</div>
+<div class="flex items-center mb-1">
+<i class="material-icons text-cyan-400 mr-2 glowing-icon">apps</i>
+<span class="text-cyan-300">Programs</span>
+</div>
+<div class="flex items-center mb-1">
+<i class="material-icons text-blue-400 mr-2 glowing-icon">paragliding</i>
+<span class="text-cyan-300">Skydrive</span>
+</div>
+<div class="flex items-center">
+<i class="material-icons text-yellow-400 mr-2 glowing-icon">memory</i>
+<span class="text-cyan-300">Electronics</span>
+</div>
+</div>
+<!-- <div class="col-span-2 row-span-1 data-box p-3 text-xs flex items-center justify-center">
+<img alt="Stark Industries logo" class="h-8 w-auto opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtcCu02fZ-LLrlPDtkHSSe36uWhB4NTbCcG2sRfscElg6-GlT_x4nVrL7SmVUYjDJxe5xPJs5gGMBwj2HKm3D-CEJ759GFX6Rqhw1AACgbZfxrD4lbdP4ZZkE-MPOLMPAd8v0pLPT5xz-2k_2rKO9U8zuUJq995u9wYuKhWdzKQE-VgmDoN3qhxzqY-P5Ac8QTAZAVDuNCuZdyphqo-LQvZxS5JTepphLHfTwQrh8Ba9Lsa6BNMOX1QB5dBrSYT5r5NQbvZwRXxUMO"/>
+</div>
+<div class="col-span-3 row-span-1 data-box p-2 text-xs flex flex-col justify-center">
+<div class="flex justify-between items-center mb-1">
+<span class="text-cyan-400">Download</span>
+<i class="material-icons text-cyan-400 text-lg glowing-icon">cloud_download</i>
+</div>
+<div class="w-full bg-cyan-900/50 rounded h-1.5 mb-1">
+<div class="bg-cyan-400 h-1.5 rounded" style="width: 60%"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-cyan-400">Upload</span>
+<i class="material-icons text-cyan-400 text-lg glowing-icon">cloud_upload</i>
+</div>
+<div class="w-full bg-cyan-900/50 rounded h-1.5">
+<div class="bg-cyan-600 h-1.5 rounded" style="width: 30%"></div> -->
+
+<div class="col-span-4 row-span-2 data-box p-4 text-sm flex items-center justify-center">
+  <textarea id="shellOutput" readonly
+    class="w-full h-96 p-4 font-mono text-sm resize-none tracking-wide outline-none
+          bg-[#050c1a] text-[#00e5ff] border border-cyan-400 rounded-xl
+          hover:shadow-[0_0_20px_#00e5ffaa_inset,0_0_30px_#00e5ff55] neon-terminal data-box"
+    placeholder="System output will appear here...">
+  </textarea>
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-8 bg-black/30 flex items-center px-4 z-50 text-xs">
+<i class="material-icons text-blue-400 mr-2 text-base">desktop_windows</i>
+<div class="flex items-center gap-2 text-xs">
+  <button onclick="sendCommand('shutdown')" class="bg-black text-cyan-300 hover:bg-cyan-900 px-3 py-1 rounded transition duration-200">
+    Shutdown
+  </button>
+  <span class="text-cyan-300">|</span>
+  <button onclick="sendCommand('restart')" class="bg-black text-cyan-300 hover:bg-cyan-900 px-3 py-1 rounded transition duration-200">
+    Restart
+  </button>
+  <span class="text-cyan-300">|</span>
+  <button onclick="sendCommand('exit')" class="bg-black text-cyan-300 hover:bg-cyan-900 px-3 py-1 rounded transition duration-200">
+    Exit
+  </button>
+  <div class="ml-auto text-cyan-400">91.219.164.5</div>
+</div>
+
+<script>
+let mediaRecorder;
+let audioChunks = [];
+let isListening = false;
+let waitingForReply = false;
+
+// === Auto-start ===
+window.onload = () => {
+  updateShellOutput("🎙️ Voice assistant initializing...");
+  checkAndStartMic(); // Only start mic if backend says so
+  pollForAIResponse(); // Still poll for backend instructions
+};
+
+// === Main loop ===
+async function startListeningLoop() {
+  isListening = true;
+  waitingForReply = false;
+
+  console.log("🎤 Listening...");
+  const audioBlob = await recordOnce();
+
+  if (audioBlob) {
+    waitingForReply = true;
+    const sent = await sendAudioToBackend(audioBlob);
+    if (sent) pollForAIResponse();  // start polling only if recognition succeeded
+    else waitingForReply = false;   // allow mic to restart if failed
+  }
+  isListening = false;
+}
+
+// === Record Audio (4 seconds) ===
+async function recordOnce() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+    audioChunks = [];
+
+    return await new Promise(resolve => {
+      mediaRecorder.ondataavailable = e => {
+        if (e.data.size > 0) audioChunks.push(e.data);
+      };
+      mediaRecorder.onstop = () => {
+        stream.getTracks().forEach(t => t.stop());
+        const blob = new Blob(audioChunks, { type: "audio/webm" });
+        resolve(blob);
+      };
+      mediaRecorder.start();
+      setTimeout(() => {
+        if (mediaRecorder.state === "recording") mediaRecorder.stop();
+      }, 4000);
+    });
+  } catch (err) {
+    updateShellOutput("❌ Mic access error: " + err);
+    return null;
+  }
+}
+
+// === Send Audio to Flask ===
+async function sendAudioToBackend(audioBlob) {
+  const formData = new FormData();
+  formData.append("audio", audioBlob, "input.webm");
+
+  try {
+    const res = await fetch("/api/listen", { method: "POST", body: formData });
+    const result = await res.json();
+
+    if (result.error || !result.text) {
+      updateShellOutput(`⚠️ ${result.error || "No speech detected"}`);
+      return false;
+    }
+
+    updateShellOutput(`🗣️ You said: ${result.text}`);
+    sendCommand(result.text);
+    return true;
+
+  } catch (err) {
+    updateShellOutput("❌ Error sending audio: " + err);
+    return false;
+  }
+}
+
+const replyQueue = [];
+
+function pollForAIResponse() {
+  const poll = async () => {
+    try {
+      const res = await fetch("/api/poll_response");
+      const data = await res.json();
+      if (data.reply) {
+        updateShellOutput("🤖 Jarvis: " + data.reply);
+        replyQueue.push(data.reply);
+        await speakQueuedReplies();
+      }
+      // Check if backend wants to start listening
+      if (data.should_listen) {
+        startListeningLoop();
+      } else {
+        setTimeout(poll, 500);
+      }
+    } catch (e) {
+      updateShellOutput("❌ AI response failed: " + e);
+      waitingForReply = false;
+    }
+  };
+  poll();
+}
+
+async function speakQueuedReplies() {
+  if (replyQueue.length === 0) {
+    waitingForReply = false;
+    return;
+  }
+  try {
+    const response = await fetch("/api/tts_batch", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ replies: replyQueue })
+    });
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const audio = new Audio(url);
+    audio.onended = () => {
+      URL.revokeObjectURL(url);
+      waitingForReply = false;
+      replyQueue.length = 0; // Clear the queue
+    };
+    audio.onerror = () => {
+      waitingForReply = false;
+    };
+    audio.play();
+  } catch (e) {
+    updateShellOutput("❌ TTS batch playback failed: " + e);
+    waitingForReply = false;
+  }
+}
+
+// === Command Handler ===
+function sendCommand(text) {
+  fetch("/api/command", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ command: text })
+  })
+    .then(r => r.json())
+    .then(data => {
+      updateShellOutput("🖥️ Command reply: " + (data.reply || "✓"));
+    })
+    .catch(e => {
+      updateShellOutput("❌ Command send error: " + e);
+    });
+}
+
+// === Output Terminal ===
+function updateShellOutput(msg) {
+  const box = document.getElementById("shellOutput");
+  const time = new Date().toLocaleTimeString();
+  box.value += `[${time}] ${msg}\n`;
+  if (box.value.split("\n").length > 500)
+    box.value = box.value.split("\n").slice(-500).join("\n");
+  box.scrollTop = box.scrollHeight;
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function checkAndStartMic() {
+  while (true) {
+    try {
+      const res = await fetch("/api/should_listen");
+      const data = await res.json();
+      if (data.should_listen) {
+        startListeningLoop();
+        break;
+      }
+    } catch (e) {
+      updateShellOutput("❌ Listen check failed: " + e);
+    }
+    await delay(500); // Wait before checking again
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+</body></html>

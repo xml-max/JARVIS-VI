@@ -1,0 +1,6 @@
+You: 
+JARVIS: There was an error talking to the AI backend.
+You: 
+JARVIS: There was an error talking to the AI backend.
+You: 
+JARVIS: Hello there! I'm JARVIS-VI, your AI assistant. How can I help you today?

@@ -1,0 +1,7 @@
+books/* filter=lfs diff=lfs merge=lfs -text
+books/YourBook.pdf filter=lfs diff=lfs merge=lfs -text
+books/Anatomy-amp-Physiology-1730154664._print.pdf filter=lfs diff=lfs merge=lfs -text
+git filter=lfs diff=lfs merge=lfs -text
+lfs filter=lfs diff=lfs merge=lfs -text
+install filter=lfs diff=lfs merge=lfs -text
+jarvis_chroma/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
