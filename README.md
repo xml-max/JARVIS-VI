@@ -14,8 +14,6 @@ An advanced personal AI assistant featuring:
 * **PyTorch** for AI model processing
 * Fully **offline** operation for maximum privacy
 
-This modified version includes significant changes to the original codebase to improve performance, add new features, and enhance security.
-
 ---
 
 ## ⚙️ Modes
