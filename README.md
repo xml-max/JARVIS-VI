@@ -131,7 +131,7 @@ This project is licensed under a custom [MIT License](https://github.com/xml-max
 
 ## 👥 Credits
 
-* **Abdelrahman Hatem (xml-max)** – Modifications, enhancements, and additional features
+* **Abdelrahman Hatem (xml-max)** - Project Author
 
 ---
 
