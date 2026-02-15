@@ -1,5 +1,4 @@
-# J.A.R.V.I.S-VI (Modified Version)
-
+# J.A.R.V.I.S-VI
 ## <span style="color:red">DISCLAIMER</span>
 
 This is a **fan-made project** created for **educational and non-commercial purposes**.
@@ -136,7 +135,6 @@ This project is licensed under a custom [MIT License](https://github.com/xml-max
 
 ## 👥 Credits
 
-* **Atharva Ingle** – Original project author
 * **Abdelrahman Hatem (xml-max)** – Modifications, enhancements, and additional features
 
 ---
