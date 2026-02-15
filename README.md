@@ -6,8 +6,6 @@ It is **not** affiliated with, endorsed by, or connected to any official entity,
 All trademarks and copyrights belong to their respective owners.
 The user interface of this project is built using **PyQt5**.
 
-**Note:** This is a competition project for **Digitopia**.
-
 An advanced personal AI assistant featuring:
 
 * **PyQt5-based Desktop UI** for seamless interaction
